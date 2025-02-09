@@ -16,42 +16,45 @@ let timeDiffSeconds = 0;
 
 function setup() {
   createCanvas(400, 350);
-  
+
   // Create input elements for distance and speeds with x-position as a constant
   distanceInput = createInput('');
-  distanceInput.position(inputX, offsetY+20);
+  distanceInput.position(inputX, offsetY + 20);
   distanceInput.size(inputWidth);
   distanceInput.input(updateDistance);  // Call when user changes the input
   distanceInput.elt.type = "number"; // Set input type to 'number' for mobile numpad
-  
+  distanceInput.attribute('placeholder', '0');
+
   speedInput1 = createInput('');
-  speedInput1.position(inputX, offsetY+60);
+  speedInput1.position(inputX, offsetY + 60);
   speedInput1.size(inputWidth);
   speedInput1.input(updateSpeeds);  // Call when user changes the input
   speedInput1.elt.type = "number"; // Set input type to 'number' for mobile numpad
-  
+  speedInput1.attribute('placeholder', '0');
+
   speedInput2 = createInput('');
-  speedInput2.position(inputX, offsetY+100);
+  speedInput2.position(inputX, offsetY + 100);
   speedInput2.size(inputWidth);
   speedInput2.input(updateSpeeds);  // Call when user changes the input
   speedInput2.elt.type = "number"; // Set input type to 'number' for mobile numpad
+  speedInput2.attribute('placeholder', '0');
 }
 
 function draw() {
   background(244);
-  
+
   // Draw text showing the calculated times for both speeds
   textSize(18);
   fill(0);
   text("Time for Speed 1 (" + speed1 + " km/h): " + nf(time1, 1, 2) + " hours", 20, 160);
   text("Time for Speed 2 (" + speed2 + " km/h): " + nf(time2, 1, 2) + " hours", 20, 200);
-  
+
   // Display the difference in time in hours, minutes, and seconds
   textSize(18);
   text("Difference in Time (hours): " + nf(timeDiffHours, 1, 2), 20, 240);
   text("Difference in Time (minutes): " + nf(timeDiffMinutes, 1, 2), 20, 280);
   text("Difference in Time (seconds): " + nf(timeDiffSeconds, 1, 2), 20, 320);
-  
+
   // Draw the labels for the inputs
   textSize(16);
   fill(0);
