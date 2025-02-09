@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+</head>
+
+<body>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+    <div id="voltageDividerEquationStandard" style="font-size: 24px;"></div>
+    <div id="voltageDividerEquationWithTolerancesMin" style="font-size: 24px;"></div>
+    <div id="voltageDividerEquationWithTolerancesMax" style="font-size: 24px;"></div>
+    <div>where</div>
+    <div id="whereWithTolerances" style="font-size: 16px;"></div>
+    <script>
+        // Using LaTeX string to render
+        document.getElementById("voltageDividerEquationStandard").innerHTML = "\\(V_{out}= V_{in} \\cdot \\frac{R_2}{R_1+R_2}\\)";
+        document.getElementById("voltageDividerEquationWithTolerancesMin").innerHTML = "\\(V_{out,min}= V_{in} \\cdot \\frac{R_{2,min}}{R_{1,max}+R_{2,min}}\\)";
+        document.getElementById("voltageDividerEquationWithTolerancesMax").innerHTML = "\\(\ V_{out,max} = V_{in} \\cdot \\frac{R_{2,max}}{R_{1,min}+R_{2,max}}\\)";
+        document.getElementById("whereWithTolerances").innerHTML = "\\(R_{i,min}=R_i\\cdot (1-tolerance), \\\\ R_{i,max}=R_i\\cdot(1+tolerance), \\\\ i\\in \\{1,2\\}\\)";
+    </script>
+</body>
+
+</html>
