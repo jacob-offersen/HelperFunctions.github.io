@@ -6,7 +6,7 @@ const diagramY = 40;
 const firstRowX = 50;
 const secondRowX = firstRowX+90;
 const textBoxWidth = 50;
-const firstRowY = 120;
+const firstRowY = 125;
 const secondRowY = firstRowY + 40;
 const thirdRowY = secondRowY + 40;
 
@@ -83,7 +83,7 @@ function draw() {
   noStroke();
   text("Vout", diagramX + 50, diagramY + 85);
   text("Vin", diagramX + 10, diagramY + 10);
-  text("R1", diagramX + 30, diagramY + 50);
-  text("R2", diagramX + 30, diagramY + 120);
+  text("R1", diagramX + 20, diagramY + 50);
+  text("R2", diagramX + 20, diagramY + 125);
 
 }

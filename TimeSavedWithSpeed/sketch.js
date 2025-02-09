@@ -1,6 +1,7 @@
 // Set the x-position for all input boxes as a constant
-const inputX = 30;
-const offsetY = 85;
+const inputX = 150;
+const textX = 20;
+const offsetY = 90;
 
 let distanceInput, speedInput1, speedInput2;
 let distance = 0;
@@ -50,9 +51,9 @@ function draw() {
   // Draw the labels for the inputs
   textSize(16);
   fill(0);
-  text("Distance (km):", 140, 40);
-  text("Speed 1 (km/h):", 140, 80);
-  text("Speed 2 (km/h):", 140, 120);
+  text("Distance (km):", textX, 40);
+  text("Speed 1 (km/h):", textX, 80);
+  text("Speed 2 (km/h):", textX, 120);
 }
 
 function updateDistance() {
