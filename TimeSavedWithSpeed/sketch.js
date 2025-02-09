@@ -1,5 +1,6 @@
 // Set the x-position for all input boxes as a constant
 const inputX = 150;
+const inputWidth = 100;
 const textX = 20;
 const offsetY = 90;
 
@@ -19,18 +20,21 @@ function setup() {
   // Create input elements for distance and speeds with x-position as a constant
   distanceInput = createInput('');
   distanceInput.position(inputX, offsetY+20);
-  distanceInput.size(100);
+  distanceInput.size(inputWidth);
   distanceInput.input(updateDistance);  // Call when user changes the input
-
+  distanceInput.elt.type = "number"; // Set input type to 'number' for mobile numpad
+  
   speedInput1 = createInput('');
   speedInput1.position(inputX, offsetY+60);
-  speedInput1.size(100);
+  speedInput1.size(inputWidth);
   speedInput1.input(updateSpeeds);  // Call when user changes the input
-
+  speedInput1.elt.type = "number"; // Set input type to 'number' for mobile numpad
+  
   speedInput2 = createInput('');
   speedInput2.position(inputX, offsetY+100);
-  speedInput2.size(100);
+  speedInput2.size(inputWidth);
   speedInput2.input(updateSpeeds);  // Call when user changes the input
+  speedInput2.elt.type = "number"; // Set input type to 'number' for mobile numpad
 }
 
 function draw() {

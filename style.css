@@ -36,3 +36,27 @@ h1 {
     text-align: center;
     padding: 50px;
 }
+
+/* CSS to remove number input arrows */
+input[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Chrome, Safari */
+    appearance: none;
+    /* For other browsers */
+    margin: 0;
+    /* Remove any margin */
+    padding: 5px;
+    /* Optional padding */
+}
+
+/* Hide the spinner buttons in WebKit browsers (Chrome/Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide spinners in Firefox */
+input[type="number"]::-moz-appearance: textfield;

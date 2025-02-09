@@ -1,11 +1,11 @@
 let vinInput, r1Input, r2Input, r1TolInput, r2TolInput;
 let vout = 0;
 
-const diagramX = 250;
+const diagramX = 350;
 const diagramY = 40;
 const firstRowX = 50;
-const secondRowX = firstRowX+90;
-const textBoxWidth = 50;
+const secondRowX = firstRowX+150;
+const textBoxWidth = 100;
 const firstRowY = 125;
 const secondRowY = firstRowY + 40;
 const thirdRowY = secondRowY + 40;
@@ -18,22 +18,27 @@ function setup() {
   vinInput = createInput("");
   vinInput.position(firstRowX, firstRowY);
   vinInput.size(textBoxWidth);
+  vinInput.elt.type = "number"; // Set input type to 'number' for mobile numpad
 
   r1Input = createInput("");
   r1Input.position(firstRowX, secondRowY);
   r1Input.size(textBoxWidth);
-
+  r1Input.elt.type = "number"; // Set input type to 'number' for mobile numpad
+  
   r1TolInput = createInput("0");
   r1TolInput.position(secondRowX, secondRowY);
   r1TolInput.size(textBoxWidth);
-
+  r1TolInput.elt.type = "number"; // Set input type to 'number' for mobile numpad
+  
   r2Input = createInput("");
   r2Input.position(firstRowX, thirdRowY);
   r2Input.size(textBoxWidth);
+  r2Input.elt.type = "number"; // Set input type to 'number' for mobile numpad
   
   r2TolInput = createInput("0");
   r2TolInput.position(secondRowX, thirdRowY);
   r2TolInput.size(textBoxWidth);
+  r2TolInput.elt.type = "number"; // Set input type to 'number' for mobile numpad
 }
 
 function draw() {
