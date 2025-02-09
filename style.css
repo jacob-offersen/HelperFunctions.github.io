@@ -1,0 +1,35 @@
+html,
+body {
+    margin: 20;
+    padding: 20;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+canvas {
+    display: block;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    color: #333;
+}
+
+.home-page body {
+    text-align: center;
+    padding: 50px;
+}

@@ -6,7 +6,7 @@ const diagramY = 40;
 const firstRowX = 50;
 const secondRowX = firstRowX+90;
 const textBoxWidth = 50;
-const firstRowY = 40;
+const firstRowY = 120;
 const secondRowY = firstRowY + 40;
 const thirdRowY = secondRowY + 40;
 
@@ -37,7 +37,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(244);
 
   let vin = float(vinInput.value());
   let r1 = float(r1Input.value());
@@ -57,12 +57,12 @@ function draw() {
   // Draw circuit representation
   fill(0);
   noStroke();
-  text("Voltage Divider Calculator", 20, 20);
-  text("Vin:", firstRowX-30, 55);
-  text("R1:", firstRowX-30, 95);
-  text("Tol:", secondRowX-30, 95);
-  text("R2:", firstRowX-30, 135);
-  text("Tol:", secondRowX-30, 135);
+  const textDistToBox = 35;
+  text("Vin:", firstRowX-textDistToBox, 55);
+  text("R1:", firstRowX-textDistToBox, 95);
+  text("Tol:", secondRowX-textDistToBox, 95);
+  text("R2:", firstRowX-textDistToBox, 135);
+  text("Tol:", secondRowX-textDistToBox, 135);
 
   text(`Vout Min: ${voutMin.toFixed(2)} V`, 20, 170);
   text(`Vout Avg: ${voutAvg.toFixed(2)} V`, 20, 190);
