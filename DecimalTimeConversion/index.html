@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Converter</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        input {
+            margin: 5px;
+            padding: 5px;
+            width: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Convert Standard Time to Decimal Time</h2>
+        <div class="input-group">
+            <input type="number" id="hours" placeholder="Hours" min="0">
+            <input type="number" id="minutes" placeholder="Minutes" min="0" max="59">
+            <input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
+        </div>
+        <p>Decimal Time: <span id="decimalTime"></span></p>
+    </div>
+
+    <div class="container">
+        <h2>Convert Decimal Time to Standard Time</h2>
+        <input type="number" id="decimalInput" placeholder="Decimal Hours" step="0.01">
+        <p>Standard Time: <span id="standardTime"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+    <a href="../index.html" class="button">Back to Home</a>
+</body>
+
+</html>
