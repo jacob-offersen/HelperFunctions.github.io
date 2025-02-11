@@ -9,11 +9,36 @@
 </head>
 
 <body class="home-page">
-    <h1>Available Helper Functions</h1>
-    <a href="DecimalTimeConversion/index.html" class="button">Decimal Time Converter</a>
-    <a href="MappingFunction/index.html" class="button">Mapping Function</a>
-    <a href="TimeSavedWithSpeed/index.html" class="button">Save Time With Speed</a>
-    <a href="VoltageDivider/index.html" class="button">Voltage Divider</a>
+    <div class="sidebar">
+        <h2>Categories</h2>
+        <a href="#time-speed">Time & Speed Calculations</a>
+        <a href="#electronics">Electronics</a>
+        <a href="#math-tools">Mathematical Tools</a>
+        <a href="" id="back-to-top" class="top-button">
+            <i>Back to top</i>
+        </a>
+    </div>
+
+    <div class="main-content">
+        <h1>Available Helper Functions</h1>
+
+        <h2 id="time-speed">Time & Speed Calculations</h2>
+        <a href="DecimalTimeConversion/index.html" class="button">Decimal Time Converter</a>
+        <a href="TimeSavedWithSpeed/index.html" class="button">Save Time With Speed</a>
+
+        <h2 id="electronics">Electronics</h2>
+        <a href="VoltageDivider/index.html" class="button">Voltage Divider</a>
+
+        <h2 id="math-tools">Mathematical Tools</h2>
+        <a href="MappingFunction/index.html" class="button">Mapping Function</a>
+    </div>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
+
 
 </html>

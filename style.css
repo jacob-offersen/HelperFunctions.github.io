@@ -37,6 +37,32 @@ h1 {
     padding: 50px;
 }
 
+.sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background: #737373;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+}
+
+.sidebar a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #2d6c00;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
 /* CSS to remove number input arrows */
 input[type="number"] {
     -moz-appearance: textfield;
