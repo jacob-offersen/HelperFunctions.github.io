@@ -9,7 +9,8 @@
 </head>
 
 <body class="home-page">
-    <div class="sidebar">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
         <h2>Categories</h2>
         <a href="#time-speed">Time & Speed Calculations</a>
         <a href="#electronics">Electronics</a>
@@ -22,6 +23,9 @@
     <div class="main-content">
         <h1>Available Helper Functions</h1>
 
+        <!-- Toggle Button for Sidebar -->
+        <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+
         <h2 id="time-speed">Time & Speed Calculations</h2>
         <a href="DecimalTimeConversion/index.html" class="button">Decimal Time Converter</a>
         <a href="TimeSavedWithSpeed/index.html" class="button">Save Time With Speed</a>
@@ -33,16 +37,28 @@
         <a href="MappingFunction/index.html" class="button">Mapping Function</a>
     </div>
 
-    <!-- Toggle Button for Sidebar -->
-    <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+
 
     <script>
         // Toggle sidebar visibility
-        document.getElementById('sidebarToggle').addEventListener('click', function() {
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('visible');
         });
-        
+
+        // Close sidebar if user clicks outside
+        document.addEventListener('click', function (event) {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const mainContent = document.querySelector('.main-content');
+
+            // Check if the click is outside the sidebar and the toggle button
+            if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+                sidebar.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top function
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }

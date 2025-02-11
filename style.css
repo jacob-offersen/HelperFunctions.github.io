@@ -97,8 +97,8 @@ h1 {
     .sidebar {
         transform: translateX(-100%);
         /* Hidden by default */
-        width: 100%;
-        /* Full width on mobile */
+        width: 50%;
+        /* Sidebar covers 50% of the width */
         z-index: 999;
         /* Ensure it stays above content */
     }
