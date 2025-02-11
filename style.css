@@ -45,6 +45,11 @@ h1 {
     padding-top: 20px;
     left: 0;
     top: 0;
+    transition: transform 0.3s ease;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
 }
 
 .sidebar a {
@@ -61,6 +66,51 @@ h1 {
 .main-content {
     margin-left: 220px;
     padding: 20px;
+}
+
+/* Toggle button (hidden on desktop) */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Show sidebar when it's toggled */
+.sidebar.visible {
+    transform: translateX(0);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .main-content {
+        padding-left: 0;
+        /* No padding for small screens */
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        /* Hidden by default */
+        width: 100%;
+        /* Full width on mobile */
+        z-index: 999;
+        /* Ensure it stays above content */
+    }
+
+    .sidebar-toggle {
+        display: block;
+        /* Show the toggle button */
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
 }
 
 /* CSS to remove number input arrows */

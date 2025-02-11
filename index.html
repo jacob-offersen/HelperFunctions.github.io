@@ -33,7 +33,16 @@
         <a href="MappingFunction/index.html" class="button">Mapping Function</a>
     </div>
 
+    <!-- Toggle Button for Sidebar -->
+    <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+
     <script>
+        // Toggle sidebar visibility
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('visible');
+        });
+        
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
