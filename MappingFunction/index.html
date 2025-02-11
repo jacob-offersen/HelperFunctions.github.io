@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <h1>Range Mapping Tool</h1>
+</head>
+
+<body>
+    <div class="input-group">
+        <label>Range 1</label>
+        <div class="input-pair">
+
+            <input type="number" id="inputStart" oninput="updateRanges()">
+            <input type="number" id="inputEnd" oninput="updateRanges()">
+        </div>
+        <label>Range 2</label>
+        <div class="input-pair">
+            <input type="number" id="outputStart" oninput="updateRanges()">
+            <input type="number" id="outputEnd" oninput="updateRanges()">
+        </div>
+    </div>
+
+    <p>Enter a value to map:</p>
+    <label>Value to Map: <input type="number" id="valueToMap" value="0" oninput="updateMappedValue()"></label>
+
+    <h3>Mapped Value: <span id="mappedValue"></span></h3>
+
+    <script>
+        let inputStart = 0, inputEnd = 100, outputStart = 0, outputEnd = 1000;
+
+        function mapValue(inputStart, inputEnd, outputStart, outputEnd, inputValue) {
+            const slope = (outputEnd - outputStart) / (inputEnd - inputStart);
+            return outputStart + slope * (inputValue - inputStart);
+        }
+
+        function updateRanges() {
+            inputStart = parseFloat(document.getElementById('inputStart').value);
+            inputEnd = parseFloat(document.getElementById('inputEnd').value);
+            outputStart = parseFloat(document.getElementById('outputStart').value);
+            outputEnd = parseFloat(document.getElementById('outputEnd').value);
+            updateMappedValue();
+        }
+
+        function updateMappedValue() {
+            const valueToMap = parseFloat(document.getElementById('valueToMap').value);
+            const mappedValue = mapValue(inputStart, inputEnd, outputStart, outputEnd, valueToMap);
+            document.getElementById('mappedValue').innerText = mappedValue.toFixed(2);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('inputStart').value = inputStart;
+            document.getElementById('inputEnd').value = inputEnd;
+            document.getElementById('outputStart').value = outputStart;
+            document.getElementById('outputEnd').value = outputEnd;
+            updateRanges();
+        });
+    </script>
+
+    <a href="../index.html" class="button">Back to Home</a>
+</body>
+
+</html>
